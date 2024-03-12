@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="loginBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #242422;" stylesheets="@../css/LoginStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson03JavaFxIntro.LoginController">
+   <center>
+        <AnchorPane fx:id="loginContainer" prefHeight="640.0" prefWidth="861.0" style="-fx-background-color: #e7edde; -fx-background-radius: 0 0 0 0;" BorderPane.alignment="CENTER">
+            <Pane fx:id="loginContent" layoutX="147.0" layoutY="97.0" prefHeight="446.0" prefWidth="667.0">
+                <Label layoutX="8.0" layoutY="7.0" prefHeight="62.0" prefWidth="353.0" text="Welcome Home!" textAlignment="CENTER" textFill="#242422">
+                    <font>
+                        <Font name="System Bold" size="42.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnLogout" layoutX="517.0" layoutY="404.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="36.0" prefWidth="131.0" style="-fx-background-color: #f69a1d;" styleClass="long-buttons" text="LOG OUT" textAlignment="CENTER" textFill="#242422" />
+                <TextField layoutX="126.0" layoutY="163.0" prefHeight="41.0" prefWidth="522.0" promptText="enter username" styleClass="form-text-field" text="Ashley Ken Comandao" />
+
+                <Label layoutX="14.0" layoutY="69.0" prefHeight="25.0" prefWidth="346.0" text="Here, you can edit your profile as you please." textFill="#383836">
+                    <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                    </font>
+                </Label>
+            <Label layoutX="20.0" layoutY="171.0" prefHeight="25.0" prefWidth="96.0" text="Username:" textFill="#383836">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField layoutX="126.0" layoutY="223.0" prefHeight="41.0" prefWidth="522.0" promptText="enter your email" styleClass="form-text-field" text="sample@email.com" />
+            <Label layoutX="20.0" layoutY="231.0" prefHeight="25.0" prefWidth="96.0" text="Email:" textFill="#383836">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="288.0" prefHeight="25.0" prefWidth="96.0" text="Fave Color:" textFill="#383836">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ColorPicker fx:id="fieldColorPicker" editable="true" layoutX="126.0" layoutY="280.0" onAction="#setBtnLogoutColor" prefHeight="41.0" prefWidth="522.0" promptText="Please select your favorite color" styleClass="form-text-field">
+               <value>
+                  <Color red="0.9647058844566345" green="0.6039215922355652" blue="0.11372549086809158" />
+               </value>
+            </ColorPicker>
+            </Pane>
+
+        </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="loginBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #242422;" stylesheets="@../css/LoginStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson03JavaFxIntro.LoginController">
+    <right>
+        <AnchorPane fx:id="switchToSignupContainer" prefHeight="640.0" prefWidth="400.0" style="-fx-background-color: #242422;" BorderPane.alignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="207.0" prefHeight="52.0" prefWidth="296.0" text="Hello, friend!" textAlignment="CENTER" textFill="#f69a1d">
+                <font>
+                    <Font name="Montserrat ExtraBold" size="36.0" />
+                </font>
+            </Label>
+            <Text fill="#cedecf" layoutX="70.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your personal details and start a journey with us" textAlignment="CENTER" wrappingWidth="259.6195411682129">
+                <font>
+                    <Font name="Montserrat Regular" size="16.0" />
+                </font>
+            </Text>
+            <Button fx:id="switchToSignUp" layoutX="124.0" layoutY="390.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="152.0" style="-fx-border-color: #cedecf; -fx-background-color: #242422;" styleClass="long-buttons" text="SIGN UP" textAlignment="CENTER" textFill="#cedecf" />
+        </AnchorPane>
+    </right>
+    <left>
+        <AnchorPane fx:id="loginContainer" prefHeight="640.0" prefWidth="560.0" style="-fx-background-color: #e7edde; -fx-background-radius: 0 0 0 0;" BorderPane.alignment="CENTER">
+            <Pane fx:id="loginContent" layoutX="-3.0" layoutY="88.0">
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="560.0" text="Sign in" textAlignment="CENTER" textFill="#242422">
+                    <font>
+                        <Font name="Montserrat Bold" size="42.0" />
+                    </font>
+                </Label>
+                <Button layoutX="185.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="54.0" prefWidth="190.0" style="-fx-background-color: #f69a1d;" styleClass="long-buttons" text="LOG IN" textAlignment="CENTER" textFill="#242422" />
+                <TextField fx:id="fieldUsername" layoutX="98.0" layoutY="203.0" prefHeight="56.0" prefWidth="360.0" promptText="Username" styleClass="form-text-field" />
+                <PasswordField fx:id="fieldPassword" layoutX="97.0" layoutY="271.0" prefHeight="56.0" prefWidth="360.0" promptText="Password" styleClass="form-text-field" />
+
+                <Label alignment="CENTER" layoutX="101.0" layoutY="148.0" prefHeight="22.0" prefWidth="354.0" text="or use your account" textFill="#383836">
+                    <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Button graphicTextGap="0.0" layoutX="173.0" layoutY="69.0" mnemonicParsing="false" styleClass="account-chips">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../images/icon-fb.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button graphicTextGap="0.0" layoutX="250.0" layoutY="69.0" mnemonicParsing="false" styleClass="account-chips">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../images/icon-google.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button graphicTextGap="0.0" layoutX="328.0" layoutY="69.0" mnemonicParsing="false" styleClass="account-chips">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../images/icon-ms.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            <Label fx:id="labelRemark" alignment="CENTER" layoutX="101.0" layoutY="331.0" prefHeight="22.0" prefWidth="354.0" textFill="#383836">
+               <font>
+                  <Font name="Montserrat Regular" size="16.0" />
+               </font>
+            </Label>
+            </Pane>
+
+        </AnchorPane>
+    </left>
+</BorderPane>
