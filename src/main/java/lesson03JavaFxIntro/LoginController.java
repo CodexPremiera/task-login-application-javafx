@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
@@ -23,7 +22,7 @@ public class LoginController {
     private final UserList users = new UserList();
 
     private Parent root;
-    //private Stage stage;
+    private Stage stage;
     private Scene scene;
 
 
@@ -31,7 +30,6 @@ public class LoginController {
     @FXML private TextField fieldPassword;
     @FXML private Label labelRemark;
     @FXML private Button btnLogout;
-    private Color buttonColor = Color.rgb(246, 154, 29);
 
     public void onClickLogin(ActionEvent actionEvent) throws IOException {
         // get form input
@@ -59,7 +57,6 @@ public class LoginController {
         stage.setScene(scene);
 
         stage.show();
-        btnLogout.setBackground(Background.fill(buttonColor));
     }
 
     public void onClickLogout(ActionEvent actionEvent) throws IOException {
@@ -70,9 +67,5 @@ public class LoginController {
         stage.show();
     }
 
-    @FXML private ColorPicker fieldColorPicker;
 
-    public void setBtnLogoutColor() {
-        buttonColor = fieldColorPicker.getValue();
-    }
 }
